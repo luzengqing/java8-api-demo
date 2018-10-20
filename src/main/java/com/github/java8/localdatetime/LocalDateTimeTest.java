@@ -7,7 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
- * Created by louis on 2017/7/5.
+ * @author zqlu
+ * @date 2018/10/20
  */
 public class LocalDateTimeTest {
 
@@ -75,6 +76,9 @@ public class LocalDateTimeTest {
 
         //获取距离970-01-01T00:00:00Z 10秒的时间戳
         Instant instant1 = Instant.ofEpochSecond(10);
+
+        System.out.println(offsetDateTime.toInstant().toEpochMilli());
+        System.out.println(l);
     }
 
     /**
@@ -134,7 +138,7 @@ public class LocalDateTimeTest {
 
         String str1 = dateTime.format(formatter);
 
-        LocalDateTime dateTime1 = LocalDateTime.parse("2017-11-11 10:00:00", formatter);
+        LocalDateTime dateTime1 = LocalDateTime.parse("2019-01-01 10:00:00", formatter);
     }
 
 
@@ -147,9 +151,12 @@ public class LocalDateTimeTest {
 
         LocalDateTime dateTime = LocalDateTime.now();
 
-        Date date = Date.from(dateTime.atZone(ZoneId.systemDefault()).toInstant());
+        Date date1 = Date.from(dateTime.atZone(ZoneId.systemDefault()).toInstant());
+        Date date2 = Date.from(dateTime.toInstant(ZoneOffset.ofHours(8)));
+        System.out.println(date1);
+        System.out.println(date2);
 
-        LocalDateTime dateTime1 = LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault());
+        LocalDateTime dateTime1 = LocalDateTime.ofInstant(date1.toInstant(), ZoneId.systemDefault());
 
     }
 }

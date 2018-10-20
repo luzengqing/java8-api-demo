@@ -10,8 +10,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created by louis on 2017/11/4.
- * 什么是Stream
+ * Stream Introduction
+ * @author zqlu
+ * @date 2018/10/20
  */
 public class WhatIsStream {
 
@@ -25,7 +26,7 @@ public class WhatIsStream {
 
     /**
      * 需求:
-     * 找出2013年以后的车，并按年份升序排列，并返回一个只包含他们的品牌名称的集合
+     * 返回一个只包含他们的品牌名称的集合, 并且是2013年以后的车，并按年份升序排列
      */
 
 

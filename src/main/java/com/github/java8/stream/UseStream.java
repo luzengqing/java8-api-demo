@@ -8,8 +8,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Created by louis on 2017/11/4.
- * Stream Apis
+ * Stream Api
+ * @author zqlu
+ * @date 2018/10/20
  */
 public class UseStream {
 
@@ -147,9 +148,9 @@ public class UseStream {
         Employee e2 = new Employee(2, "李四");
         Employee e3 = new Employee(3, "王五");
         Employee e4 = new Employee(4, "赵六");
-        Depart d1 = new Depart(10, "开发部", Arrays.asList(e1, e2));
-        Depart d2 = new Depart(12, "市场部", Arrays.asList(e3, e4));
-        Company company = new Company("凯京", Arrays.asList(d1, d2));
+        Depart d1 = new Depart(10, "机票事业部", Arrays.asList(e1, e2));
+        Depart d2 = new Depart(12, "酒店事业部", Arrays.asList(e3, e4));
+        Company company = new Company("携程", Arrays.asList(d1, d2));
 
         /**
          * 扁平化处理，打破部门约束，将多个部门的员工放在一个容器里
